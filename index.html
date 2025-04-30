@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Git and GitHub: Version Control for Beginners</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css"
+    />
+    <link rel="stylesheet" href="dist/theme/white.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Title Slide -->
+        <section>
+          <section>
+            <h1>Git and GitHub</h1>
+            <h3>For Beginners</h3>
+          </section>
+        </section>
+
+        <!-- The Problem -->
+        <section>
+          <h2>The Problem</h2>
+          <ul>
+            <li>Lost code changes</li>
+            <li>Overwritten work</li>
+            <li>Who changed what and when?</li>
+            <li>
+              Multiple file versions: <br /><code>project_final.zip</code>
+              <br /><code>project_final_v2.zip</code>
+            </li>
+            <li>Difficult team collaboration</li>
+          </ul>
+        </section>
+
+        <!-- Version Control System -->
+        <section>
+          <h2>Version Control System</h2>
+          <p>A system that tracks changes to files</p>
+          <ul>
+            <li>See file history</li>
+            <li>Restore old versions</li>
+            <li>Track who made changes</li>
+            <li>Work together without conflicts</li>
+          </ul>
+        </section>
+
+        <!-- Git vs GitHub -->
+        <section>
+          <h2>Git vs GitHub</h2>
+          <div class="row">
+            <div class="column">
+              <h3>Git</h3>
+              <ul>
+                <li>Software on your computer</li>
+                <li>Tracks file changes</li>
+                <li>Works offline</li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>GitHub</h3>
+              <ul>
+                <li>Website</li>
+                <li>Stores Git repositories</li>
+                <li>Collaboration platform</li>
+              </ul>
+            </div>
+          </div>
+          <p class="fragment">Git = the tool, GitHub = the platform</p>
+        </section>
+
+        <!-- What is Git? -->
+        <section>
+          <h2>What is Git?</h2>
+          <ul>
+            <li>Tracks code changes</li>
+            <li>Allows multiple people to work together</li>
+            <li>Records history of your project</li>
+            <li>Works without internet</li>
+          </ul>
+        </section>
+
+        <!-- Repositories -->
+        <section>
+          <h2>Repositories</h2>
+          <p>
+            A <span class="highlight-text">repository</span> (or "repo") is your
+            project folder
+          </p>
+
+          <div class="row">
+            <div class="column">
+              <h4>Local Repository</h4>
+              <ul>
+                <li>On your computer</li>
+                <li>Where you work</li>
+              </ul>
+            </div>
+            <div class="column">
+              <h4>Remote Repository</h4>
+              <ul>
+                <li>On GitHub</li>
+                <li>Shared with others</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Branch -->
+        <section>
+          <h2>Branch</h2>
+          <p>A separate version of your project</p>
+          <ul>
+            <li>Main branch = official version</li>
+            <li>New branches = working on features</li>
+            <li>Experiment without breaking things</li>
+          </ul>
+          <div class="terminal fragment">
+            <p>$ git branch feature-login</p>
+            <p>$ git checkout feature-login</p>
+          </div>
+        </section>
+
+        <!-- Commit -->
+        <section>
+          <h2>Commit</h2>
+          <p>A snapshot of your changes</p>
+          <ul>
+            <li>Saves your work</li>
+            <li>Has a message describing changes</li>
+            <li>Creates project history</li>
+          </ul>
+          <div class="terminal fragment">
+            <p>$ git add index.html</p>
+            <p>$ git commit -m "Add login form"</p>
+          </div>
+        </section>
+
+        <!-- Push -->
+        <section>
+          <h2>Push</h2>
+          <p>Uploading your commits to GitHub</p>
+          <ul>
+            <li>Shares your changes with others</li>
+            <li>Backs up your work online</li>
+          </ul>
+          <div class="terminal fragment">
+            <p>$ git push origin feature-login</p>
+          </div>
+        </section>
+
+        <!-- Pull -->
+        <section>
+          <h2>Pull</h2>
+          <p>Downloading changes from GitHub</p>
+          <ul>
+            <li>Gets updates from teammates</li>
+            <li>Keeps your local copy up-to-date</li>
+          </ul>
+          <div class="terminal fragment">
+            <p>$ git pull origin main</p>
+          </div>
+        </section>
+
+        <!-- Merge -->
+        <section>
+          <h2>Merge</h2>
+          <p>Combining changes from different branches</p>
+          <ul>
+            <li>Brings features into the main branch</li>
+            <li>Combines different work together</li>
+          </ul>
+          <div class="terminal fragment">
+            <p>$ git checkout main</p>
+            <p>$ git merge feature-login</p>
+          </div>
+        </section>
+
+        <!-- Workflow of GitHub -->
+        <section>
+          <h2>GitHub Workflow</h2>
+          <ol>
+            <li>Create/clone a repository</li>
+            <li>Create a branch</li>
+            <li>Make changes</li>
+            <li>Push your branch</li>
+            <li>Create a Pull Request</li>
+            <li>Review the code</li>
+            <li>Merge changes</li>
+          </ol>
+        </section>
+
+        <!-- Quick Demo: Git Setup -->
+        <section>
+          <h2>Setting up Git</h2>
+          <ul>
+            <li>Download from <a href="https://git-scm.com">git-scm.com</a></li>
+            <li>Install with default options</li>
+            <li>Open Git Bash or Command Prompt</li>
+          </ul>
+          <div class="terminal fragment">
+            <p>$ git --version</p>
+          </div>
+        </section>
+
+        <!-- Quick Demo: Git Configuration -->
+        <section>
+          <h2>Configuring Git</h2>
+          <div class="terminal">
+            <p># Tell Git who you are</p>
+            <p>$ git config --global user.name "Your Name"</p>
+            <p>$ git config --global user.email "your.email@example.com"</p>
+          </div>
+        </section>
+
+        <!-- Quick Demo: GitHub Account -->
+        <section>
+          <h2>Creating a GitHub Account</h2>
+          <ol>
+            <li>Go to <a href="https://github.com">github.com</a></li>
+            <li>Click "Sign Up"</li>
+            <li>Follow the instructions</li>
+            <li>Verify your email</li>
+          </ol>
+        </section>
+
+        <!-- Quick Demo: Initialize Repo -->
+        <section>
+          <section>
+            <h2>Creating a Repository</h2>
+          </section>
+
+          <section>
+            <div class="column">
+              <h4>New repo</h4>
+              <div class="terminal">
+                <p>$ mkdir my-project</p>
+                <p>$ cd my-project</p>
+                <p>$ git init</p>
+                <p>$ echo "# My Project" > README.md</p>
+                <p>$ git add README.md</p>
+                <p>$ git commit -m "First commit"</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="column">
+              <h4>Clone existing repo</h4>
+              <div class="terminal">
+                <p>$ git clone https://github.com/username/repository.git</p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- Quick Demo: Pushing to Repository -->
+        <section>
+          <h2>Pushing to GitHub</h2>
+          <div class="terminal">
+            <p># Connect to GitHub</p>
+            <p>
+              $ git remote add origin https://github.com/username/my-project.git
+            </p>
+            <p></p>
+            <p># Push your code</p>
+            <p>$ git push -u origin main</p>
+          </div>
+        </section>
+
+        <!-- GitHub: Your Portfolio -->
+        <section>
+          <h2>GitHub: Your Portfolio</h2>
+          <ul>
+            <li>Showcase your projects</li>
+            <li>Prove your coding skills</li>
+            <li>Build your reputation</li>
+            <li>Connect with other developers</li>
+          </ul>
+          <p class="fragment">Your coding resume!</p>
+        </section>
+
+        <!-- Fork -->
+        <section>
+          <h2>Fork</h2>
+          <p>A copy of someone else's repository on your account</p>
+          <ul>
+            <li>Make your own copy of a project</li>
+            <li>Experiment with changes</li>
+            <li>First step to contribute to open source</li>
+          </ul>
+        </section>
+
+        <!-- Pull Requests -->
+        <section>
+          <h2>Pull Requests (PR)</h2>
+          <p>Asking to merge your changes</p>
+          <ul>
+            <li>Notifies project owners</li>
+            <li>Shows your changes</li>
+            <li>Allows for code review</li>
+            <li>How contributions happen</li>
+          </ul>
+        </section>
+
+        <!-- Quick Demo: Forking and PR -->
+        <section>
+          <h2>Forking a Repository</h2>
+          <ol>
+            <li>Find a repository on GitHub</li>
+            <li>Click "Fork" button</li>
+            <li>Select your account</li>
+          </ol>
+          <div class="terminal fragment">
+            <p># Clone your fork</p>
+            <p>$ git clone https://github.com/your-username/repository.git</p>
+          </div>
+        </section>
+
+        <!-- Quick Demo: Making Changes -->
+        <section>
+          <h2>Making Changes</h2>
+          <div class="terminal">
+            <p># Create a branch</p>
+            <p>$ git checkout -b my-feature</p>
+            <p></p>
+            <p># Edit files...</p>
+            <p></p>
+            <p># Save changes</p>
+            <p>$ git add .</p>
+            <p>$ git commit -m "Add new feature"</p>
+            <p></p>
+            <p># Push to GitHub</p>
+            <p>$ git push origin my-feature</p>
+          </div>
+        </section>
+
+        <!-- Quick Demo: Creating PR -->
+        <section>
+          <h2>Creating a Pull Request</h2>
+          <ol>
+            <li>Go to your fork on GitHub</li>
+            <li>Click "Compare & pull request"</li>
+            <li>Add title and description</li>
+            <li>Click "Create pull request"</li>
+          </ol>
+        </section>
+
+        <!-- Quick Demo: Accepting PR -->
+        <section>
+          <h2>Accepting a Pull Request</h2>
+          <ol>
+            <li>Review the changes</li>
+            <li>Add comments if needed</li>
+            <li>Click "Merge pull request"</li>
+            <li>Confirm the merge</li>
+          </ol>
+        </section>
+
+        <!-- Open Source Development -->
+        <section>
+          <h2>Open Source</h2>
+          <p>Software that anyone can view, use, and modify</p>
+          <ul>
+            <li>Free to use and contribute</li>
+            <li>Built by communities</li>
+            <li>GitHub hosts millions of open source projects</li>
+            <li>Examples: Linux, Firefox, VS Code</li>
+          </ul>
+        </section>
+
+        <!-- Open Source Competitions -->
+        <section>
+          <h2>Open Source Competitions</h2>
+          <ul>
+            <li><strong>Hacktoberfest</strong>: October event for beginners</li>
+            <li><strong>Google Summer of Code</strong>: For students</li>
+            <li><strong>GitHub Game Off</strong>: Annual game jam</li>
+          </ul>
+          <p class="fragment">Great for experience!</p>
+        </section>
+
+        <!-- Perks and Benefits -->
+        <section>
+          <h2>Benefits for Students</h2>
+          <ul>
+            <li>GitHub Student Developer Pack (free tools)</li>
+            <li>Build a portfolio for jobs</li>
+            <li>Learn real-world skills</li>
+            <li>Connect with developers</li>
+          </ul>
+        </section>
+
+        <!-- Conclusion -->
+        <section>
+          <h2>Summary</h2>
+          <ul>
+            <li>Git tracks your code changes</li>
+            <li>GitHub makes collaboration easy</li>
+            <li>Essential skill for developers</li>
+            <li>Start small and practice</li>
+          </ul>
+        </section>
+
+        <!-- Q&A -->
+        <section>
+          <h1>Questions?</h1>
+          <p>Thank you!</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        transition: "slide",
+      });
+      // Activate the overview mode
+      Reveal.toggleOverview(true);
+    </script>
+  </body>
+</html>
